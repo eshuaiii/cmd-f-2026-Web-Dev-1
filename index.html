@@ -11,16 +11,50 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-
+    
     <!-- TODO: Add title, icon -->
-
+    <title>Pomodoro Harvest</title>
+    <link rel="icon" type="image/x-icon" href="public/flower.ico" />
     <!-- TODO: Add our CSS stylesheet -->
-
+     
   </head>
   <body>
     <!-- TODO: Build our body! -->
     <!-- HINT: You may need to copy paste these symbols: ▶ ↺ -->
-    
+    <div class="timer-page">
+      <div class="timer-wrapper">
+        <div class="timer-layout">
+
+          <!-- Controls: play/pause and reset -->
+          <div class="timer-controls">
+            <button id="play-pause-btn" class="icon-btn" onclick="toggleRunning()">▶</button>
+            <button class="icon-btn" onclick="handleReset()">↺</button>
+          </div>
+
+          <!-- Main row: study buttons | timer display | break buttons -->
+          <div class="timer-main">
+
+            <div class="duration-group">
+              <h3>Start studying</h3>
+              <button class="duration-btn" onclick="">30 mins</button>
+              <button class="duration-btn" onclick="">45 mins</button>
+              <button class="duration-btn" onclick="">60 mins</button>
+            </div>
+
+            <h1 id="timer-display" class="timer-display">30:00</h1>
+
+            <div class="duration-group">
+              <h3>Start break</h3>
+              <button class="duration-btn" onclick="">5 mins</button>
+              <button class="duration-btn" onclick="">10 mins</button>
+              <button class="duration-btn" onclick="">15 mins</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- TODO: Add our JavaScript file -->
 
   </body>

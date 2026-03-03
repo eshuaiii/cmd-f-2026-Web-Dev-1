@@ -1,0 +1,83 @@
+/* ============================================================
+   Universal Selectors - sets consistent defaults across all browsers
+   ============================================================ */
+* {
+  margin: 0;
+  padding: 0;
+  /* This changes how we calculate size and positions. It includes borders and padding in the element size, which makes it easier to work with. */
+  box-sizing: border-box;
+}
+
+body {
+  /* Note: Space Grotesk is the font we imported in index.html */
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+/* ============================================================
+   Page shell
+   ============================================================ */
+.timer-page {
+
+}
+
+.timer-wrapper {
+
+}
+
+/* ============================================================
+   Layout
+   ============================================================ */
+.timer-layout {
+
+}
+
+.timer-controls {
+  /* Remove the comments when it's time! */
+  /* display: flex;
+  align-items: center;
+  gap: 24px; */
+}
+
+.timer-main {
+
+}
+
+.duration-group {
+  /* Remove the comments when it's time! */
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; */
+}
+
+.duration-group h3 {
+
+}
+
+/* ============================================================
+   Timer display
+   ============================================================ */
+.timer-display {
+  font-size: 150px;
+  line-height: 1;
+  font-weight: 700;
+  color: #277645;
+  /* tabular-nums keeps the digits the same width so the
+        layout doesn't jump as numbers change */
+  font-variant-numeric: tabular-nums;
+}
+
+/* ============================================================
+   Buttons
+   ============================================================ */
+
+/* Duration buttons */
+.duration-btn {
+
+}
+
+/* Icon buttons (▶ and ↺) */
+.icon-btn {
+
+}
