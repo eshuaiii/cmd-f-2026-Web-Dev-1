@@ -22,7 +22,9 @@ body {
 }
 
 .timer-wrapper {
-
+  /* This helps us ensure the content doesn't stretch too wide on large screens, and gives space for the content inside */
+  width: 100%;
+  max-width: 1152px;
 }
 
 /* ============================================================
