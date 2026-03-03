@@ -61,13 +61,7 @@ body {
    Timer display
    ============================================================ */
 .timer-display {
-  font-size: 150px;
-  line-height: 1;
-  font-weight: 700;
-  color: #277645;
-  /* tabular-nums keeps the digits the same width so the
-        layout doesn't jump as numbers change */
-  font-variant-numeric: tabular-nums;
+
 }
 
 /* ============================================================
