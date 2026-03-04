@@ -18,7 +18,12 @@ body {
    Page shell
    ============================================================ */
 .timer-page {
-
+  min-height: 100vh; /* the height of the page will fill the entire screen */
+  background-color: #cdffc0; /* background colour of the page (finally) */
+  display: flex; /* start flexbox */
+  align-items: center; /* items will be centered vertically and horizontally */
+  justify-content: center;
+  padding: 32px; /* add padding around container, overriding universal */
 }
 
 .timer-wrapper {
@@ -31,30 +36,40 @@ body {
    Layout
    ============================================================ */
 .timer-layout {
-
+  display: flex;
+  flex-direction: column; /* items should flex vertically (in a column) */
+  align-items: center; /* items will be centered vertically and horizontally */
+  justify-content: center;
+  gap: 32px; /* sets the gap between rows/columns */
 }
 
 .timer-controls {
-  /* Remove the comments when it's time! */
-  /* display: flex;
+  display: flex;
   align-items: center;
-  gap: 24px; */
+  gap: 24px;
 }
 
 .timer-main {
-
+  display: flex;
+  align-items: center; /* items will be centered vertically */
+  justify-content: space-between; /* horizontal space is evenly distributed between elements */
+  gap: 24px; /* sets the gap between rows/columns */
+  width: 100%; /* ensure the entire width of the container is used so space-between works */
 }
 
 .duration-group {
-  /* Remove the comments when it's time! */
-  /* display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px; */
+  gap: 20px;
 }
 
+/* this targets all h3 items that are descendents of the duration-group class */
 .duration-group h3 {
-
+  font-size: 1.875rem; /* font size that is 1.875 times larger than the default font size (16px) */
+  font-weight: 600; /* heavy/bold font of weight 600 */
+  color: #277645; /* change the colour of the text */
+  text-decoration: underline; /* underline the text */
 }
 
 /* ============================================================
@@ -62,11 +77,10 @@ body {
    ============================================================ */
 .timer-display {
   font-size: 150px;
-  line-height: 1;
+  line-height: 1; /* sets the height of the line (i.e. spacing between lines */
   font-weight: 700;
   color: #277645;
-  /* tabular-nums keeps the digits the same width so the
-        layout doesn't jump as numbers change */
+  /* tabular-nums keeps the digits the same width so the layout doesn't jump as numbers change */
   font-variant-numeric: tabular-nums;
 }
 
@@ -76,10 +90,32 @@ body {
 
 /* Duration buttons */
 .duration-btn {
+  width: 163px; /* set the width and height of elements with the class (i.e. the buttons) */
+  height: 40px;
+  font-size: 1.25rem; /* font inside of the class has size 1.25 times the default (16px) */
+  font-weight: 600;
+  background-color: #bbffd4; /* the class has a green background*/
+  border: 2px solid #277645; /* the class has a green solid border, 2px large */
+  color: #2d5f4c; /* the class has green font. */
+  border-radius: 9999px; /* round our borders to make it pill-like */
+  cursor: pointer; /* change our mouse cursor to one that indicates a clickable button */
+  transition: background-color 0.2s;
+}
 
+.duration-btn:hover {
+  background-color: #a8e6c1;
 }
 
 /* Icon buttons (▶ and ↺) */
 .icon-btn {
+  background: none; /* remove ALL background attributes (colour, image, etc.) */
+  border: none; /* remove the border */
+  cursor: pointer;
+  font-size: 3rem; /* our icons are text - make the text larger */
+  color: #277645;
+  transition: opacity 0.2s;
+}
 
+.icon-btn:hover {
+  opacity: 0.7;
 }
