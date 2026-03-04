@@ -10,21 +10,28 @@ let intervalId = null; // stores the ID returned by setInterval so we can stop i
 
 function formatTime(totalSeconds) {
   // TODO: calculate minutes and seconds
+  // Floor the number of minutes to remove our remainder seconds
+  const minutes = Math.floor(totalSeconds / 60);
+  // Use the modulus operator to get the remainder seconds after dividing by 60
+  const seconds = totalSeconds % 60;
 
   // TODO: update return statement
   // The String() function converts our number value to a string.
   // The padStart() function pads our current string (e.g. minutes) with 0s as needed until we've reached length of 2 (e.g. "5" becomes "05", but "15" stays "15").
-  return `${String(_____).padStart(2, "0")}:${String(______).padStart(2, "0")}`;
+  return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
 }
 
 // TODO: Write updateDisplay() function
-
-
+function updateDisplay() {
+  document.querySelector("#timer-display").textContent = formatTime(timeLeft);
+}
 
 // TODO: Write updatePlayPauseButton() function
 // HINT: to check if a variable is true, simply write the variable name (e.g. if (isRunning) { ... } )
 // HINT: You may need to copy paste these symbols: ▶ ⏸
-
+function updatePlayPauseButton() {
+  document.querySelector("#play-pause-btn").textContent = isRunning ? "⏸" : "▶";
+}
 
 // ============================================================
 // PROVIDED FUNCTIONS
